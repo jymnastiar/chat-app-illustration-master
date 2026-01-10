@@ -169,7 +169,7 @@ main{
     background-color: var(--White);
     border-radius: 2rem;
     z-index: -1;
-    box-shadow: 0 0 50px 20px var(--Gray-300);
+    box-shadow: 0 0 100px 5px var(--Gray-300);
 }
 
 .phone__bar{
