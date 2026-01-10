@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  
+  <title>Chat app illustration | Frontend Mentor</title>
+
+</head>
+<body>
+  <div class="arch-container">
+        <div class="arch-top-left"></div>
+        <div class="arch-bottom-right"></div>
+  </div>
+  <main>
+    <div class="phone">
+      <div class="phone__bar"></div>
+      <header class="phone__header">
+        <i class="fa-solid fa-angle-left"></i>
+        <img class="phone__profile" src="images/avatar.jpg" alt="avatar">
+        <div class="phone__header-name">
+          <p>Samuel Green</p>
+          <span>Available to Walk</span>
+        </div>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </header>
+      <ul class="phone__body">
+        <li class="phone__chat phone__chat--received"><span>That sounds great. I’d be <br> happy with that.</span></li>
+        <li class="phone__chat phone__chat--received"><span>Could you send over some <br> pictures of your dog, please?</span></li>
+        <li class="phone__chat chat__message--image">
+          <img src="images/dog-image-1.jpg" alt="dog-image-1">
+          <img src="images/dog-image-2.jpg" alt="dog-image-2">
+          <img src="images/dog-image-3.jpg" alt="dog-image-3">
+        </li>
+        <li class="phone__chat phone__chat--sent"><span>Here are a few pictures. She’s <br> a happy girl!</span></li>
+        <li class="phone__chat phone__chat--sent"><span>Can you make it?</span></li>
+        <li class="phone__chat phone__chat--received"><span>She looks so happy! The time <br> we discussed works. How <br> long shall I take her out for?</span></li>
+        <form class="pricing-form">
+          <label class="phone__radio">
+            <input type="radio" name="pricing">
+            <span class="phone__radio--button"></span>
+            <span> 30 minute walk  </span>
+            <span class="pricing__option">$29</span>
+          </label>
+          <label class="phone__radio">
+            <input type="radio" name="pricing">
+            <span class="phone__radio--button"></span>
+            <span>1 hour walk</span>
+            <span class="pricing__option">$49</span>
+          </label>
+        </form>
+      </ul>
+      <footer class="phone__footer">
+        <form class="message-form">
+          <input type="text" name="message" class="message-form__input" placeholder="Type a message…" required>
+          <button type="submit" class="message-form__submit">
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </button>
+        </form>
+      </footer>
+    </div>
+    
+    <article>
+      <h1>Simple booking</h1>
+      <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+        discuss arrangements and make bookings. Once the walk has been completed you can rate 
+        your walker and book again all through the chat.</p>
+    </article>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/jymnastiar">Jymnastiar</a>.
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,460 @@
+:root {
+    /** Text */
+    --Purple-100 : hsl(272, 33%, 92%); 
+    --Purple-300 : hsl(276, 100%, 81%); /* sub-heading at the top of the app UI */
+    --Purple-600 : hsl(276, 55%, 52%); /* chat on the left */
+    --Purple-950 : hsl(271, 36%, 24%); /* main heading */
+    --Gray-500 : hsl(270, 7%, 64%); /* chat on the right, paragraph */
+    --Gray-300 : hsl(206, 6%, 79%); /* placeholder text */
+
+    /** Gradient */
+    --Pink-500: hsl(293, 100%, 63%);
+    --Purple-500: hsl(264, 100%, 61%);
+    --Gradient: linear-gradient(225deg, var(--Pink-500), var(--Purple-500));
+
+    /** Secondary */
+    --White: hsl(0, 100%, 100%);
+    --Gray-100 : hsl(270, 20%, 96%); /* app background */
+    --Purple-950 : hsl(271, 36%, 24%); /* submit button background */
+    --Pink-400 : hsl(289, 100%, 72%); /* radio button outline */
+
+    --font-main: "Rubik", sans-serif;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.fa,
+.fa-solid,
+.fa-regular,
+.fa-brands {
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    font-family: var(--font-main);
+    margin-block-end: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+    text-decoration: none;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+main{
+    margin: 10% 0;
+    padding: 2rem;
+    gap: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.arch-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.arch-top-left {
+    position: fixed;
+    width: 50vw;
+    height: 50vw;
+    background: linear-gradient(225deg, var(--Pink-500), var(--Purple-500));
+    min-width: 270px;
+    min-height: 400px;
+    max-width: 270px;
+    max-height: 400px;
+    top: 0;
+    left: -80px;
+    border-radius: 0 0 50% 50%;
+    z-index: -1;
+}
+
+.arch-bottom-right {
+    position: fixed;
+    bottom: 0px;
+    right: -120px;
+    width: 60vw;
+    height: 60vw;
+    min-width: 280px;
+    min-height: 350px;
+    max-width: 280px;
+    max-height: 350px;
+    background: var(--Gray-100);
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+}
+
+.phone{
+    width: 15.8rem;
+    height: 33.75rem;
+    background-color: var(--Gray-100);
+    font-weight: var(--font-weight-400);
+    font-size: 10px;
+    position: relative;
+    border-radius: 1.5rem;
+    border: 0.1rem solid var(--Gray-300);
+}
+
+.phone::after{
+    content: "";
+    position: absolute;
+    inset: -0.7rem;
+    width: 17rem;
+    height: 34.95rem;
+    background-color: var(--White);
+    border-radius: 2rem;
+    z-index: -1;
+    box-shadow: 0 0 50px 20px var(--Gray-300);
+}
+
+.phone__bar{
+    width: 8.9rem;
+    height: 1.875rem;
+    border-radius: 0 0 1rem 1rem;
+    background-color: var(--White);
+    position: absolute;
+    left: 50%;
+    top: 0.3rem;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.phone__header{
+    color: var(--White);
+    width: 15.8rem;
+    height: 4.7rem;
+    inset: -0.1rem;
+    padding: 1rem 1rem 0 1rem;
+    border-radius: 1.5rem 1.5rem 0.5rem 0.5rem;
+    background: var(--Gradient);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fa-solid{
+    cursor: pointer;
+}
+
+.phone__profile{
+    height: 1.7rem;
+    border-radius: 50%;
+    border: 0.1rem solid var(--White);
+}
+
+.phone__header-name{
+    display: block;
+}
+
+.phone__header-name p{
+    height: 1rem;
+    margin: 0;
+    font-weight: var(--font-weight-500);
+    font-size: 0.8rem;
+}
+
+.phone__header-name span{
+    font-size: 0.5rem;
+    color: var(--Purple-300);
+}
+
+.phone__header .fa-ellipsis-vertical{
+    margin-left: auto;
+}
+
+.phone__body{
+    padding: 5.5rem 0.5rem 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.phone__chat{
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+    font-weight: var(--font-weight-400);
+    line-height: 1.3;
+}
+
+.phone__chat--received{
+    width: 9.4rem;
+    background-color: var(--Purple-100);
+    color: var(--Purple-600);
+    border-radius: 0.8rem 0.8rem 0.8rem 0.3rem;
+}
+
+.phone__chat--sent,
+.chat__message--image{
+    margin-left: auto;
+}
+
+.phone__chat--sent{
+    background-color: var(--White);
+    color: var(--Gray-500);
+    border-radius: 0.8rem 0.8rem 0.3rem 0.8rem;
+}
+
+.chat__message--image{
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chat__message--image img{
+    border-radius: 0.5rem;
+    height: 3rem;
+}
+
+.phone__radio{
+    width: 12rem;
+    border-radius: 0.7rem 0.7rem 0.7rem 0.3rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--White);
+    background: var(--Gradient);
+    padding: 0.5rem 0.7rem;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.phone__radio--button{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 0.05rem solid var(--White);
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.phone__radio input{
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    border: blue;
+    display: none;
+}
+
+.pricing__option{
+    font-size: 1rem;
+    font-weight: var(--font-weight-700);
+    margin-left: auto;
+}
+
+.phone__radio input[type="radio"]:checked + .phone__radio--button {
+    background-color: var(--White);
+    box-shadow: 
+        0 0 0 2px rgba(255,255,255,0.3),
+        0 0 8px rgba(255,255,255,0.6);
+    transform: scale(1);
+}
+
+.phone__radio:has(input:checked) {
+    border: 1px solid var(--Pink-400) ;
+}
+
+.phone__footer{
+    margin: 0.5rem;
+    position: relative;
+}
+
+.message-form__input{
+    padding-left: 1rem;
+    width: 14.6rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 3.125rem;
+    font-size: 0.7rem;
+}
+
+.message-form__input:focus{
+    border: 1.5px solid var(--Purple-950) ;
+    outline: none;
+}
+
+.message-form__input::placeholder{
+    color: var(--Gray-300);
+}
+
+.message-form__submit{
+    background-color: transparent;
+    border: none;
+}
+
+.fa-circle-chevron-right{
+    position: absolute;
+    right: 10px;
+    top: 5.5px;
+    font-size: 1.8rem;
+    color: var(--Purple-950);
+}
+
+article h1{
+    font-size: 2.5rem;
+    color: var(--Purple-950);
+    font-weight: var(--font-weight-500);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+article p{
+    color: var(--Gray-500);
+    text-align: center;
+    max-width: 28rem;
+}
+
+.attribution {
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: underline;
+}
+
+@media (min-width: 480px) {
+    .arch-top-left {
+        min-width: 300px;
+        min-height: 400px;
+        max-width: 400px;
+        max-height: 550px;
+        left: -60px;
+    }
+
+    .arch-bottom-right {
+        max-width: 430px;
+        max-height: 550px;
+        bottom: -50px;
+        right: -130px;
+    }
+}
+
+/* .arch-top-left {
+    position: fixed;
+    width: 50vw;
+    height: 50vw;
+    background: linear-gradient(225deg, var(--Pink-500), var(--Purple-500));
+    min-width: 270px;
+    min-height: 400px;
+    max-width: 270px;
+    max-height: 400px;
+    top: 0;
+    left: -80px;
+    border-radius: 0 0 50% 50%;
+    z-index: -1;
+}
+
+.arch-bottom-right {
+    position: fixed;
+    bottom: 0px;
+    right: -120px;
+    width: 60vw;
+    height: 60vw;
+    min-width: 280px;
+    min-height: 350px;
+    max-width: 280px;
+    max-height: 350px;
+    background: var(--Gray-300);
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+} */
+
+@media (min-width: 843px){
+    .arch-top-left {
+        max-width: 450px;
+        max-height: 550px;
+        left: -50px;
+    }
+
+    .arch-bottom-right {
+        max-width: 480px;
+        max-height: 600px;
+        bottom: -150px;
+        right: -200px;
+    }
+
+    article h1,
+    article p{
+        text-align: left;
+    }
+}
+
+/* @media (min-width: 1024px) {
+    .arch-top-left {
+        max-width: 550px;
+        max-height: 670px;
+        left: -200px;
+    }
+
+    .arch-bottom-right {
+        max-width: 560px;
+        max-height: 710px;
+        bottom: -100px;
+        right: -300px;
+    }
+} */
